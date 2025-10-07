@@ -10,7 +10,7 @@ services:
             - DB_NAME=start_tec_senai
             - DB_USER=postgres
             - DB_PASSWORD=postgres
-            - CORS_ORIGINS=http://localhost:3001,http://localhost:5173
+            - CORS_ORIGINS=http://localhost:3001,http://localhost:5173,CORS_ORIGINS=http://localhost:3001,http://localhost:5173,http://start-tec-senai.manchae.com,http://www.start-tec-senai.manchae.com,https://start-tec-senai.manchae.com,https://www.start-tec-senai.manchae.com
             - SESSION_CLEANUP_DAYS=90
         depends_on:
             db_start_tec_senai:
