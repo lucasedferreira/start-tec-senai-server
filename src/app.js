@@ -56,7 +56,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 // Server configuration
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Test database connection and start server
 const startServer = async () => {

@@ -6,7 +6,7 @@ module.exports = {
         password: process.env.DB_PASSWORD || 'postgres',
         database: process.env.DB_NAME || 'start_tec_senai',
         host: process.env.DB_HOST || 'localhost',
-        port: process.env.DB_PORT || 5432,
+        port: process.env.DB_PORT || 5433,
         dialect: 'postgres',
         logging: false,
         define: {
@@ -19,7 +19,7 @@ module.exports = {
         password: process.env.DB_PASSWORD,
         database: process.env.DB_NAME,
         host: process.env.DB_HOST,
-        port: process.env.DB_PORT || 5432,
+        port: process.env.DB_PORT || 5433,
         dialect: 'postgres',
         logging: false,
         define: {
