@@ -19,6 +19,8 @@ services:
             - .:/app
             - /app/node_modules
         restart: unless-stopped
+        networks:
+            - proxy
         command: sh -c "sleep 5 && npm run db:migrate && npm start"
 
     db:
@@ -40,3 +42,7 @@ services:
 
 volumes:
     postgres_data:
+
+networks:
+    proxy:
+        external: true
