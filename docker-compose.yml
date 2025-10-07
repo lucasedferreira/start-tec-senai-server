@@ -20,6 +20,7 @@ services:
             - /app/node_modules
         restart: unless-stopped
         networks:
+            - start-tec-network
             - proxy
         command: sh -c "sleep 5 && npm run db:migrate && npm start"
 
@@ -39,10 +40,14 @@ services:
             timeout: 5s
             retries: 10
         restart: unless-stopped
+        networks:
+            - start-tec-network
 
 volumes:
     postgres_data:
 
 networks:
+    start-tec-network:
+        driver: bridge
     proxy:
         external: true
