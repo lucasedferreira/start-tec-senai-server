@@ -1,0 +1,35 @@
+{
+    "name": "senai-vocational-quiz-backend",
+    "version": "1.0.0",
+    "description": "Backend API for Senai vocational quiz application",
+    "main": "src/app.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js",
+        "db:migrate": "npx sequelize-cli db:migrate",
+        "db:seed": "npx sequelize-cli db:seed:all",
+        "db:reset": "npx sequelize-cli db:migrate:undo:all && npm run db:migrate && npm run db:seed"
+    },
+    "keywords": [
+        "quiz",
+        "senai",
+        "vocational",
+        "education"
+    ],
+    "author": "Senai",
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-validator": "^7.0.1",
+        "helmet": "^7.1.0",
+        "pg": "^8.11.3",
+        "pg-hstore": "^2.3.4",
+        "sequelize": "^6.35.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2",
+        "sequelize-cli": "^6.6.2"
+    }
+}
