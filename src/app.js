@@ -56,7 +56,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 // Server configuration
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Test database connection and start server
 const startServer = async () => {
@@ -66,7 +66,7 @@ const startServer = async () => {
         console.log('✓ Database connection established successfully');
 
         // Start server
-        app.listen(PORT, () => {
+        app.listen(PORT, '0.0.0.0', () => {
             console.log(`✓ Server is running on port ${PORT}`);
             console.log(`✓ Environment: ${process.env.NODE_ENV || 'development'}`);
             console.log(`✓ Health check: http://localhost:${PORT}/health`);

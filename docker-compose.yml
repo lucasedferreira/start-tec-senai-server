@@ -1,11 +1,11 @@
 services:
-    app:
+    app_start_tec_senai:
         build: .
         ports:
             - "3001:3000"
         environment:
             - NODE_ENV=development
-            - DB_HOST=db
+            - DB_HOST=db_start_tec_senai
             - DB_PORT=5432
             - DB_NAME=start_tec_senai
             - DB_USER=postgres
@@ -13,7 +13,7 @@ services:
             - CORS_ORIGINS=http://localhost:3001,http://localhost:5173
             - SESSION_CLEANUP_DAYS=90
         depends_on:
-            db:
+            db_start_tec_senai:
                 condition: service_healthy
         volumes:
             - .:/app
@@ -24,7 +24,7 @@ services:
             - proxy
         command: sh -c "sleep 5 && npm run db:migrate && npm start"
 
-    db:
+    db_start_tec_senai:
         image: postgres:15
         environment:
             - POSTGRES_DB=start_tec_senai
