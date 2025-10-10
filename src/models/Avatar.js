@@ -14,6 +14,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.TEXT,
             allowNull: true,
         },
+        message: {
+            type: DataTypes.TEXT,
+            allowNull: true,
+            comment: 'Mensagem personalizada associada ao avatar',
+        },
         type: {
             type: DataTypes.ENUM('dominant', 'hybrid', 'balanced'),
             allowNull: false,

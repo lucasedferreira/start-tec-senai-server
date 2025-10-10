@@ -116,7 +116,7 @@ exports.getAvatarStats = async (req, res) => {
             include: [{
                 model: Avatar,
                 as: 'avatar',
-                attributes: ['id', 'name', 'description', 'type', 'related_courses'],
+                attributes: ['id', 'name', 'description', 'message', 'type', 'related_courses'],
             }],
             where: {
                 finished_at: { [Op.ne]: null },

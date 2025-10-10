@@ -51,7 +51,7 @@ exports.getQuestionBlocks = async (req, res) => {
 exports.getAllAvatars = async (req, res) => {
     try {
         const avatars = await Avatar.findAll({
-            attributes: ['id', 'name', 'description', 'type', 'related_courses'],
+            attributes: ['id', 'name', 'description', 'message', 'type', 'related_courses'],
             order: [
                 ['type', 'ASC'],
                 ['name', 'ASC'],
